@@ -14,7 +14,7 @@ $(function ()
 		audio2.play();
 	})
 	
-	$("#drag-content").on("touchStart", function ( e, idx ) {
+	$("#drag-content").on("draggable.touchStart", function ( e, idx ) {
 		audio1.stop();
 		audio2.stop();
 		audio3.stop();
@@ -23,5 +23,5 @@ $(function ()
 
 		owner['audio' + (idx+3)].play( idx );
 	});	
-	
+
 });

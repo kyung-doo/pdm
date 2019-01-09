@@ -336,7 +336,7 @@ $(function ()
 					this.touchTarget = target;
 				}
 				this.touchTarget.css({"z-index":999});
-				this.element.trigger("touchStart", target.index());
+				this.element.trigger("draggable.touchStart", target.index());
 			}
 
 			
@@ -405,11 +405,11 @@ $(function ()
 
 						this.touchTarget.addClass("active");
 						hitTarget.addClass("active");
-						this.element.trigger("success", [hitTarget.index(), this.touchTarget.index()]);
+						this.element.trigger("draggable.success", [hitTarget.index(), this.touchTarget.index()]);
 
 						if(this.checkFinish())
 						{
-							this.element.trigger("finish");
+							this.element.trigger("draggable.finish");
 						}
 					}
 					else
@@ -423,7 +423,7 @@ $(function ()
 							TweenLite.to(this.touchTarget, 0.6, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 						}
 						
-						this.element.trigger("failed");
+						this.element.trigger("draggable.failed");
 					}
 				}
 				else
