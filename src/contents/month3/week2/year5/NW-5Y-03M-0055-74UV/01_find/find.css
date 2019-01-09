@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/* layout */
+body { 
+    width:1280px;
+    height:800px;
+}
+
+#wrap{
+    width:100%;
+    height:100%;
+    overflow:hidden
+}
+
+#container{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:url('bg.jpg') no-repeat;
+}
+
+#drag-content .drag-area {
+    position:absolute;
+    opacity:0.5;
+}
+
+#drag-content .drag-area:nth-child(1) {
+    width: 196px;
+    height: 150px;
+    left: 334px;
+    top: 128px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(2) {
+    width: 196px;
+    height: 150px;
+    left: 544px;
+    top: 128px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(3) {
+    width: 196px;
+    height: 150px;
+    left: 752px;
+    top: 128px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(4) {
+    width: 196px;
+    height: 150px;
+    left: 962px;
+    top: 128px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(5) {
+    width: 196px;
+    height: 150px;
+    left: 334px;
+    top: 292px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(6) {
+    width: 196px;
+    height: 150px;
+    left: 542px;
+    top: 292px;
+    background: #000000;
+}
+
+#drag-content .drag-area:nth-child(7) {
+    width: 196px;
+    height: 150px;
+    left: 752px;
+    top: 292px;
+    background: #000000;
+}
+
+#drag-content .drag-area .area{
+    position:relative;
+    top:25%;
+    left:25%;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+
+#drag-content .drag-item{
+    transition:opacity 1s;
+}
+#drag-content .drag-item:nth-child(1) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_01.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(2) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_02.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(3) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_03.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(4) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_04.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(5) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_05.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(6) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_06.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(7) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_07.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(8) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_08.png') no-repeat;
+}
+#drag-content .drag-item:nth-child(9) {
+    width: 196px;
+    height: 150px;
+    background: url('btn_09.png') no-repeat;
+}
+
+#drag-content .drag-item .area{
+    position:relative;
+    top:0;
+    left:0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
