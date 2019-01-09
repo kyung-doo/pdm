@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+
+
+/* base */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:'-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"';
+}
+
+* { 
+	-webkit-tap-highlight-color:rgba(255,255,255,0)
+}
+
+
+
+/* common */
+.blind{
+	visibility:hidden;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	width:0;
+	height:0;
+	font-size:0;
+	line-height:0
+}
+
+.empty { 
+	color:rgba(0, 0, 0, 0);
+	font-size:0
+}
+
+.hidden{display:none}
+
+.al{text-align:left }
+.ac{text-align:center }
+.ar{text-align:right }
+.vt{vertical-align:top }
+
+.mt2{margin-top:2px }
+.mt4{margin-top:4px }
+.mt5{margin-top:5px }
+.mt6{margin-top:6px }
+.mt8{margin-top:8px }
+.mt10{margin-top:10px }
+.mt15{margin-top:15px }
+.mt20{margin-top:20px }
+.mt25{margin-top:25px }
+.mt30{margin-top:30px }
+.mt35{margin-top:35px }
+.mt40{margin-top:40px }
+.mt45{margin-top:45px }
+.mt50{margin-top:50px }
+.mt70{margin-top:70px }
+.mt90{margin-top:90px }
+.mt100{margin-top:100px }
+.mt110{margin-top:110px }
+.mt120{margin-top:120px }
+.mt130{margin-top:130px }
+
+.ml2{margin-left:2px }
+.ml4{margin-left:4px }
+.ml5{margin-left:5px }
+.ml8{margin-left:8px }
+.ml10{margin-left:10px }
+.ml15{margin-left:15px }
+.ml20{margin-left:20px }
+.ml25{margin-left:25px }
+.ml30{margin-left:30px }
+.ml35{margin-left:35px }
+.ml40{margin-left:40px }
+.ml45{margin-left:45px }
+.ml50{margin-left:50px }
+.ml70{margin-left:70px }
+.ml90{margin-left:90px }
+.ml100{margin-left:100px }
+.ml110{margin-left:110px }
+.ml120{margin-left:120px }
+.ml130{margin-left:130px }
+
+.brtn{border-top:0 }
+.brrn{border-right:0 }
+.brbn{border-bottom:0 }
+.brln{border-left:0 }
+.mtn{margin-top:0 }
+.mrn{margin-right:0 }
+.mbn{margin-bottom:0 }
+.mln{margin-left:0 }
+

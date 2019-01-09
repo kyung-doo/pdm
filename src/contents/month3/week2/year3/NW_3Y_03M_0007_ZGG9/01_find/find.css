@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* layout */
+body { 
+    width:1280px;
+    height:800px;
+}
+
+#wrap{
+    width:100%;
+    height:100%;
+    overflow:hidden
+}
+
+#container{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:url('bg.jpg') no-repeat;
+}
+
+.btn {
+    position: absolute;
+    opacity:0;
+}
+.btn.down {
+    opacity:1;
+}
+
+#btn1 {
+    background: url('line effect01.png') no-repeat;
+    left:0;
+    top:25px;
+    width:863px;
+    height:609px;
+}
+
+#btn2 {
+    background: url('line effect02.png') no-repeat;
+    left: 748px;
+    top: 500px;
+    width: 532px;
+    height: 129px;
+}
+
+
+.alert {
+    position: absolute;
+    width: 306px;
+    height: 279px;
+}
+
+#alert1 {
+    background: url('balloon01.png') no-repeat;
+    left: 65px;
+    top: 20px;
+}
+#alert2 {
+    background: url('balloon02.png') no-repeat;
+    left: 902px;
+    top: 188px;
+}
