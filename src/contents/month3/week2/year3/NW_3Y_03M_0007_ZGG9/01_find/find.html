@@ -16,12 +16,36 @@
 		<script type="text/javascript" src="../../../../../../js/common.js"></script>
 		<script type="text/javascript" src="../../../../../../js/ui.js"></script>
 		<script type="text/javascript" src="find.js"></script>
+		<style>
+			#tabmenu > a {
+				color:#fff;
+			}
+			#tabmenu > a.active {
+				color:red;
+			}
+			.tab-content{
+				position:absolute;
+				top:20px;
+				left:0;
+				color:#fff;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- wrap -->
 		<div id="wrap">
 			<!-- container -->
 			<div id="container">
+
+				<div id="tabmenu" data-ui="tabmenu" data-option='{}'>
+					<a data-ui="button" data-option='{"target":"#tab-content1","targetOpenOnce":true}' class="active">tab1</a>
+					<a data-ui="button" data-option='{"target":"#tab-content2","targetOpenOnce":true}'>tab2</a>
+					<a data-ui="button" data-option='{"target":"#tab-content3","targetOpenOnce":true}'>tab3</a>
+				</div>
+
+				<div id="tab-content1" class="tab-content">content1</div>
+				<div id="tab-content2" class="tab-content hidden">content2</div>
+				<div id="tab-content3" class="tab-content hidden">content3</div>
 
 				<div id="btn1" 
 					class="btn" 

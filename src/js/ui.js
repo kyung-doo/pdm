@@ -187,6 +187,15 @@ $(function ()
 			*/
 			click : function () {
 				click.call(this);
+			},
+
+
+			/*
+			* @ public 타겟 감추기
+			* @ return void
+			*/
+			hideTarget: function () {
+				$(this.options.target).hide(true);
 			}
 
 		});
@@ -194,7 +203,7 @@ $(function ()
 	})();
 
 	// 버튼 기본 옵션
-	Button.DEFAULT = {type: "default", toggle: false, target: "", targetOpenOnce: true, mp3: ""};
+	Button.DEFAULT = {type: "default", toggle: false, target: "", targetOpenOnce: false, mp3: ""};
 
     function Plugin(option, params) {
         return this.each(function () {
@@ -216,7 +225,26 @@ $(function ()
 
 
 
-
+/*
+*	탭메뉴 플러그인
+*   태그로 생성 시 		 <div data-ui="tabmenu" data-options='{}'>
+*							<a class="active" data-ui="button" data-options='{"target":"#tab-target1"}'></a>
+*							<a data-ui="button" data-options='{"target":"#tab-target2"}'></a>
+*							<a data-ui="button" data-options='{"target":"#tab-target3"}'></a>
+*						</div>
+*
+*						<div id="tab-target1"></div>
+*						<div id="tab-target2"></div>
+*						<div id="tab-target3"></div>
+*
+*   스크립트로 생성 시    $("div").tabmenu({});
+*	옵션
+*	 	
+*   이벤트
+*		
+*	메서드
+*		
+*/
 (function ($) {
 	'use strict';
 
@@ -224,29 +252,28 @@ $(function ()
 		
 		function initUI() {
 			var owner  = this;
-			owner.element.find("*[data-ui='button']").each(function ( i ) {
-				$(this).on("button.click", function ( e )
-				{
-					owner.element.find("*[data-ui='button']").removeClass("active");
-					$(this).addClass("active");
-				});
+			owner.element.find("*[data-ui='button']").on("button.click", function ( e )
+			{
+				var target = $(this);
+				owner.element.find("*[data-ui='button']").each(function ( i ) {
+					if($(this)[0] == target[0]) {
+						$(this).addClass("active");
+					}
+					else {
+						$(this).removeClass("active").button("hideTarget");
+					}
+				})
 			});
-			
 		}
 
-
 		return Class.extend({
-
-			
 			init : function (element, options) {
 				this.element = element;
 				this.options = options;
 				initUI.call(this);
 			},
-
-			
 			dispose : function () {
-				
+				owner.element.find("*[data-ui='button']").off("button.click");
 			}
 		});
 
