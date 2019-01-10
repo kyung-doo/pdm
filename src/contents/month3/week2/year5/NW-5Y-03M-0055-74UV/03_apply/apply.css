@@ -18,95 +18,122 @@ body {
     height:100%;
 }
 
-#gate {
-    position: absolute;
+
+
+
+#content {
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+#content, 
+#content > div{
+    position:absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: url('start.jpg') no-repeat;
+}
+
+#content1 {
+    background:url('bg_01.jpg') no-repeat;
+}
+#content2 {
+    background:url('bg_02.jpg') no-repeat;
+}
+#content3 {
+    background:url('bg_03.jpg') no-repeat;
+}
+#content4 {
+    background:url('bg_04.jpg') no-repeat;
+}
+#content5 {
+    background:url('bg_05.jpg') no-repeat;
+}
+#content6 {
+    background:url('bg_06.jpg') no-repeat;
+}
+
+#question{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 137px;
+    color:#fff;
+    font-family: 'Noto Sans CJK KR';
+    font-size: 34px;
+    line-height: 180px;
+    text-indent: 40px;
+
+}
+#question .tab-content1{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url('q_01.png') no-repeat;
+}
+#question .tab-content2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url('q_02.png') no-repeat;
+}
+#question .tabmenu > a{
+    position:absolute;
+    top: 0;
+    display: inline-block;
+    width: 125px;
+    height: 50px;
     cursor: pointer;
 }
-
-
-#drag-content {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url('bg.jpg') no-repeat;
+#question .tabmenu > a:nth-child(1){
+    left: 0;  
+}
+#question .tabmenu > a:nth-child(2){
+    left: 120px;
 }
 
 
-#drag-content .drag-area {
+#banner {
     position:absolute;
-    transition:opacity 1s;
+    left: 123px;
+    top: 11px;
+    width: 683px;
+    height:127px;
+    background: url('thum board.png');
 }
 
-#drag-content .drag-area:nth-child(1) {
-    width: 187px;
-    height: 145px;
-    left: 174px;
-    top: 21px;
-    background: url('box01.png') no-repeat;
-}
-#drag-content .drag-area:nth-child(2) {
-    width: 172px;
-    height: 130px;
-    left: 223px;
-    top: 355px;
-    background: url('box02.png') no-repeat;
-}
-#drag-content .drag-area:nth-child(3) {
-    width: 135px;
-    height: 131px;
-    left: 22px;
-    top: 513px;
-    background: url('box03.png') no-repeat;
+.swiper-container {
+    position:absolute;
+    left: 82px;
+    top: 25px;
+    width:522px;
+    height:68px;
 }
 
-#drag-content .drag-area .area{
-    position:relative;
-    top:25%;
-    left:25%;
-    display: inline-block;
-    width: 50%;
-    height: 50%;
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
 }
-#drag-content .drag-area.active {
-    opacity:0;
+.swiper-button-prev,
+.swiper-button-next {
+    outline: none;
+    width: 36px;
+    height: 39px;
 }
-
-
-#drag-content .drag-item{
-    transition:opacity 1s;
-}
-#drag-content .drag-item:nth-child(1) {
-    width: 242px;
-    height: 199px;
-    background: url('ob_01.png') no-repeat;
-}
-#drag-content .drag-item:nth-child(2) {
-    width: 242px;
-    height: 126px;
-    background: url('ob_02.png') no-repeat;
-}
-#drag-content .drag-item:nth-child(3) {
-    width: 193px;
-    height: 201px;
-    background: url('ob_03.png') no-repeat;
+.swiper-button-prev {
+    left:20px;
+    background-image: url('btn_prev.png');
 }
 
-#drag-content .drag-item .area{
-    position:relative;
-    top:0;
-    left:0;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#drag-content .drag-item.active {
-    opacity:0;
-}
+.swiper-button-next {
+    right:20px;
+    background-image: url('btn_next.png');
+} 

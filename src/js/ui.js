@@ -37,6 +37,14 @@ $(function ()
 		$(this).draggable(option);
 	});
 
+	//스와이퍼 생성
+	$("*[data-ui='swiper']").each(function ( i )
+	{
+		console.log('!!!!!!!')
+		var option = $(this).attr("data-option") ? $.parseJSON($(this).attr("data-option")) : {};
+		$(this).swiper(option);
+	});
+
 });
 
 
@@ -591,5 +599,69 @@ $(function ()
 
     $.fn.draggable = Plugin;
     $.fn.draggable.Constructor = Draggable;
+
+})(jQuery);
+
+
+
+
+/*
+*	탭메뉴 플러그인
+*   태그로 생성 시 		 <div data-ui="swiper" data-options='{}'>
+*							
+*						</div>
+*
+*
+*   스크립트로 생성 시    $("div").swiper({});
+*	옵션
+*	 	
+*   이벤트
+*		
+*	메서드
+*		
+*/
+(function ($) {
+	'use strict';
+
+	var SwiperPlugin = SwiperPlugin || (function () {
+		
+		function initUI() {
+			this.swiper = new Swiper(this.element[0], this.options);
+		}
+
+		return Class.extend({
+			init : function (element, options) {
+				this.element = element;
+				this.options = options;
+				this.swiper;
+				initUI.call(this);
+			},
+			dispose : function () {
+				
+			},
+
+			getSwiper : function () {
+				return this.swiper;
+			}
+		});
+
+	})();
+
+	// 기본 옵션
+	SwiperPlugin.DEFAULT = {};
+
+    function Plugin(option, params) {
+        return this.each(function () {
+            var $this = $(this);
+            var data = $this.data('ui.swiper');
+            var options =  $.extend({}, SwiperPlugin.DEFAULT, typeof option == "object" && option);
+            if (!data) $this.data('ui.swiper', (data = new SwiperPlugin($this, options)));
+            if (typeof option == 'string') data[option](params);
+        });
+    }
+
+	window.SwiperPlugin = SwiperPlugin;
+    $.fn.swiper = Plugin;
+    $.fn.swiper.Constructor = SwiperPlugin;
 
 })(jQuery);
