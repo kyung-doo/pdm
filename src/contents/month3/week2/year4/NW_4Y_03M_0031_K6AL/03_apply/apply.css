@@ -16,133 +16,193 @@ body {
     position:relative;
     width:100%;
     height:100%;
+    background: url('bg_sub.jpg') no-repeat;
+}
+
+.puzzle-bg {
+    position: absolute;
+    left:71px;
+    top:192px;
+    width:794px;
+    height:500px;
+}
+.puzzle-bg.puzzle1 {
+    background: url('puzzle_img01_bg.png') no-repeat;
+}
+.puzzle-bg.puzzle2 {
+    background: url('puzzle_img02_bg.png') no-repeat;
+}
+
+.puzzle-line {
+    position: absolute;
+    left: 61px;
+    top: 186px;
+    width:809px;
+    height:510px;
+    background: url('line.png') no-repeat;
+}
+
+.puzzle-clear .item {
+    position: absolute;
+    opacity:0;
+}
+.puzzle-clear .item:nth-child(1) {
+    left: 78px;
+    top: 192px;
+}
+.puzzle-clear .item:nth-child(2) {
+    left: 271px;
+    top: 192px;
+}
+.puzzle-clear .item:nth-child(3) {
+    left: 534px;
+    top: 192px;
+}
+
+.puzzle-clear .item:nth-child(4) {
+    left: 71px;
+    top: 356px;
+}
+.puzzle-clear .item:nth-child(5) {
+    left: 266px;
+    top: 382px;
+}
+.puzzle-clear .item:nth-child(6) {
+    left: 602px;
+    top: 379px;
 }
 
 
-
-
-#content {
+.puzzle-content .drag-area {
     position:absolute;
-    left: 0;
-    top: 0;
-}
-#content, 
-#content > div{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 240px;
 }
 
-#content1 {
-    background:url('bg_01.jpg') no-repeat;
+.puzzle-content .drag-area:nth-child(1) {
+    left: 78px;
+    top: 197px;
 }
-#content2 {
-    background:url('bg_02.jpg') no-repeat;
+.puzzle-content .drag-area:nth-child(2) {
+    left: 340px;
+    top: 197px;
 }
-#content3 {
-    background:url('bg_03.jpg') no-repeat;
+.puzzle-content .drag-area:nth-child(3) {
+    left: 608px;
+    top: 197px;
 }
-#content4 {
-    background:url('bg_04.jpg') no-repeat;
+.puzzle-content .drag-area:nth-child(4) {
+    left: 78px;
+    top: 445px;
 }
-#content5 {
-    background:url('bg_05.jpg') no-repeat;
+.puzzle-content .drag-area:nth-child(5) {
+    left: 340px;
+    top: 445px;
 }
-#content6 {
-    background:url('bg_06.jpg') no-repeat;
-}
-
-.question{
-    position:absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 137px;
-    color:#fff;
-    font-family: 'Noto Sans CJK KR';
-    font-size: 34px;
-    line-height: 180px;
-    text-indent: 40px;
-
-}
-.question .tab-content1{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:url('q_01.png') no-repeat;
-}
-.question .tab-content2{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:url('q_02.png') no-repeat;
-}
-.question.tabone .tab-content1{
-    position:absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:url('q_03.png') no-repeat;
+.puzzle-content .drag-area:nth-child(6) {
+    left: 608px;
+    top: 445px;
 }
 
-.question .tabmenu > a{
-    position:absolute;
-    top: 0;
+.puzzle-content .drag-area .area {
+    position: relative;
     display: inline-block;
-    width: 125px;
-    height: 50px;
-    cursor: pointer;
+    width: 50%;
+    height: 50%;
+    top:25%;
+    left:25%;
 }
-.question .tabmenu > a:nth-child(1){
-    left: 0;  
+
+.puzzle-content .drag-item{
+    transition:opacity 1s;
 }
-.question .tabmenu > a:nth-child(2){
-    left: 120px;
+.puzzle-content .drag-item:nth-child(1) {
+    width:141px;
+    height:135px;
+    background: url('puzzle_img01_p01.png');
+}
+
+.puzzle-content .drag-item:nth-child(2) {
+    width:184px;
+    height:137px;
+    background: url('puzzle_img01_p02.png');
+}
+.puzzle-content .drag-item:nth-child(3) {
+    width:183px;
+    height:138px;
+    background: url('puzzle_img01_p03.png');
+}
+
+.puzzle-content .drag-item:nth-child(4) {
+    width:149px;
+    height:181px;
+    background: url('puzzle_img01_p04.png');
+}
+
+.puzzle-content .drag-item:nth-child(5) {
+    width:227px;
+    height:168px;
+    background: url('puzzle_img01_p05.png');
+}
+
+.puzzle-content .drag-item:nth-child(6) {
+    width:143px;
+    height:169px;
+    background: url('puzzle_img01_p06.png');
+}
+.puzzle-content .drag-item .area{
+    display:inline-block;
+    width:100%;
+    height:100%;
+}
+
+.puzzle-content .drag-item.active{
+    opacity:0;
 }
 
 
-#banner {
-    position:absolute;
-    left: 123px;
-    top: 11px;
-    width: 683px;
-    height:127px;
-    background: url('thum board.png');
+.puzzle-content.puzzle1 .drag-item:nth-child(1) {
+    background: url('puzzle_img01_p01.png');
 }
 
-.swiper-container {
-    position:absolute;
-    left: 82px;
-    top: 25px;
-    width:522px;
-    height:68px;
+.puzzle-content.puzzle1 .drag-item:nth-child(2) {
+    background: url('puzzle_img01_p02.png');
+}
+.puzzle-content.puzzle1 .drag-item:nth-child(3) {
+    background: url('puzzle_img01_p03.png');
 }
 
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor:pointer;
-}
-.swiper-button-prev,
-.swiper-button-next {
-    outline: none;
-    width: 36px;
-    height: 39px;
-}
-.swiper-button-prev {
-    left:20px;
-    background-image: url('btn_prev.png');
+.puzzle-content.puzzle1 .drag-item:nth-child(4) {
+    background: url('puzzle_img01_p04.png');
 }
 
-.swiper-button-next {
-    right:20px;
-    background-image: url('btn_next.png');
-} 
+.puzzle-content.puzzle1 .drag-item:nth-child(5) {
+    background: url('puzzle_img01_p05.png');
+}
+
+.puzzle-content.puzzle1 .drag-item:nth-child(6) {
+    background: url('puzzle_img01_p06.png');
+}
+
+.puzzle-content.puzzle2 .drag-item:nth-child(1) {
+    background: url('puzzle_img02_p01.png');
+}
+
+.puzzle-content.puzzle2 .drag-item:nth-child(2) {
+    background: url('puzzle_img02_p02.png');
+}
+.puzzle-content.puzzle2 .drag-item:nth-child(3) {
+    background: url('puzzle_img02_p03.png');
+}
+
+.puzzle-content.puzzle2 .drag-item:nth-child(4) {
+    background: url('puzzle_img02_p04.png');
+}
+
+.puzzle-content.puzzle2 .drag-item:nth-child(5) {
+    background: url('puzzle_img02_p05.png');
+}
+
+.puzzle-content.puzzle2 .drag-item:nth-child(6) {
+    background: url('puzzle_img02_p06.png');
+}
