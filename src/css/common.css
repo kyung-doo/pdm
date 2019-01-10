@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Noto Sans CJK KR';
+    src: url( '../font/NotoSansCJKkr-Medium.otf' );
+}
 
 
 /* base */
