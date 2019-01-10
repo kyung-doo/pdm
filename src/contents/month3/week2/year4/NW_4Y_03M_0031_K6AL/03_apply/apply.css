@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+/* layout */
+body { 
+    width:1280px;
+    height:800px;
+}
+
+#wrap{
+    width:100%;
+    height:100%;
+    overflow:hidden
+}
+
+#container{
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+
+
+
+#content {
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+#content, 
+#content > div{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#content1 {
+    background:url('bg_01.jpg') no-repeat;
+}
+#content2 {
+    background:url('bg_02.jpg') no-repeat;
+}
+#content3 {
+    background:url('bg_03.jpg') no-repeat;
+}
+#content4 {
+    background:url('bg_04.jpg') no-repeat;
+}
+#content5 {
+    background:url('bg_05.jpg') no-repeat;
+}
+#content6 {
+    background:url('bg_06.jpg') no-repeat;
+}
+
+.question{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 137px;
+    color:#fff;
+    font-family: 'Noto Sans CJK KR';
+    font-size: 34px;
+    line-height: 180px;
+    text-indent: 40px;
+
+}
+.question .tab-content1{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url('q_01.png') no-repeat;
+}
+.question .tab-content2{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url('q_02.png') no-repeat;
+}
+.question.tabone .tab-content1{
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url('q_03.png') no-repeat;
+}
+
+.question .tabmenu > a{
+    position:absolute;
+    top: 0;
+    display: inline-block;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+}
+.question .tabmenu > a:nth-child(1){
+    left: 0;  
+}
+.question .tabmenu > a:nth-child(2){
+    left: 120px;
+}
+
+
+#banner {
+    position:absolute;
+    left: 123px;
+    top: 11px;
+    width: 683px;
+    height:127px;
+    background: url('thum board.png');
+}
+
+.swiper-container {
+    position:absolute;
+    left: 82px;
+    top: 25px;
+    width:522px;
+    height:68px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    outline: none;
+    width: 36px;
+    height: 39px;
+}
+.swiper-button-prev {
+    left:20px;
+    background-image: url('btn_prev.png');
+}
+
+.swiper-button-next {
+    right:20px;
+    background-image: url('btn_next.png');
+} 
