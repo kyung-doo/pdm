@@ -58,12 +58,12 @@ body {
     top:226px;
     width:194px;
     height:385px;
-    background: url("blank01.png");
+    background: url("blank01.png") no-repeat;
 }
 #hiddenArea2{
     left:180px;
-    top:227px;
-    width:286px;
+    top:225px;
+    width:386px;
     height:451px;
-    background: url("blank02.png");
+    background: url("blank02.png") no-repeat;
 }
