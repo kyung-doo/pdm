@@ -458,7 +458,7 @@ $(function ()
 						}
 						else
 						{
-							TweenLite.to(this.touchTarget, 0.6, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
+							TweenLite.to(this.touchTarget, failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 						}
 						
 						this.element.trigger("draggable.failed", [hitTarget.index(), this.touchTarget.index()]);
@@ -472,7 +472,7 @@ $(function ()
 					}
 					else
 					{
-						TweenLite.to(this.touchTarget, 0.6, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
+						TweenLite.to(this.touchTarget, failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 					}
 				}
 
@@ -601,7 +601,7 @@ $(function ()
 	})();
 
 	// 메인 기본 옵션
-	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false, customLength:0};
+	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false, customLength:0, failedSpeed:0.6};
 
     function Plugin(option, params)
     {

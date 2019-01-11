@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+		<!-- css -->
+		<link type="text/css" rel="stylesheet" href="../../../../../../css/plugins.css"></link>
+		<link type="text/css" rel="stylesheet" href="../../../../../../css/common.css"></link>
+		<link type="text/css" rel="stylesheet" href="apply.css"></link>
+
+		<!-- js -->
+		<script type="text/javascript" src="../../../../../../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../../../../../../js/plugins.js"></script>
+		<script type="text/javascript" src="../../../../../../js/common.js"></script>
+		<script type="text/javascript" src="../../../../../../js/ui.js"></script>
+		<script type="text/javascript" src="apply.js"></script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- container -->
+			<div id="container">
+
+				<div id="gate" 
+					data-ui="button" 
+					data-option='{"target":"#drag-content","targetOpenOnce":true}'></div>
+
+				<div id="drag-content" 
+					class="hidden"
+					data-ui="draggable"
+					data-option='{"dragNum":[[1,2,3,4],[1,2,3,4],[1,2,3,4],[1,2,3,4]],"free":true}'>
+
+					<div class="drag-areas">
+						<div class="drag-area"><span class="area"></span></div>
+						<div class="drag-area"><span class="area"></span></div>
+						<div class="drag-area"><span class="area"></span></div>
+						<div class="drag-area"><span class="area"></span></div>
+					</div>
+
+					<div class="drag-items">
+						<div class="drag-item" x="947" y="243"><span class="area"></span></div>
+						<div class="drag-item" x="880" y="491"><span class="area"></span></div>
+						<div class="drag-item" x="751" y="298"><span class="area"></span></div>
+						<div class="drag-item" x="751" y="298"><span class="area"></span></div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- //container -->
+		</div>
+		<!-- //wrap -->
+	</body>
+</html>
