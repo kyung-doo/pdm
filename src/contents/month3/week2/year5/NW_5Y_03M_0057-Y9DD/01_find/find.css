@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* layout */
+body { 
+    width:1280px;
+    height:800px;
+}
+
+#wrap{
+    width:100%;
+    height:100%;
+    overflow:hidden
+}
+
+#container{
+    position:relative;
+    width:100%;
+    height:100%;
+    background:url('bg.jpg') no-repeat;
+}
+
+.face{
+    position: absolute;
+}
+#face1{
+    width: 414px;
+    height: 376px;
+    left: 437px;
+    top: 19px;
+    background: url("face_01.png") no-repeat;
+}
+#face2{
+    width: 412px;
+    height: 391px;
+    left: 121px;
+    top: 201px;
+    background: url("face_02.png") no-repeat;
+}
+#face3{
+    width: 412px;
+    height: 377px;
+    left: 731px;
+    top: 210px;
+    background: url("face_03.png") no-repeat;
+}
+#face4{
+    width: 412px;
+    height: 377px;
+    left: 431px;
+    top: 399px;
+    background: url("face_04.png") no-repeat;
+}
+
+.btn{
+    width: 414px;
+    height: 376px;
+    position: absolute;
+    background: url("apple_01.png") no-repeat;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.btn:hover{
+    background: url("apple_02.png") no-repeat;
+}
+#btn1{
+    left: 437px;
+    top: 19px;
+}
+#btn2{
+    left: 121px;
+    top: 201px;
+}
+#btn3{
+    left: 731px;
+    top: 196px;
+}
+#btn4{
+    left: 431px;
+    top: 385px;
+}
+.btn.clicked{
+    opacity: 0;
+}

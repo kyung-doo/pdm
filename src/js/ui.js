@@ -315,10 +315,11 @@ $(function ()
 						</div>
 *   스크립트로 생성 시    $("div").draggable({});
 *	옵션
-*		dragNum: array  : 	area에 넣을 drag-item 인덱스 번호 [1,2,3] 다중) [[1,2,3],[1,2,3]]
-*		clone:boolean   : 	한개의 drag-item이 여러 area에 들어가야 할경우 복제
-*		multi:boolean   : 	한개의 area에 여러게 drag-item 이 들어가야할 경우
-*		free:boolean    : 	drop시 기본은 영역위치에 고정되는데 고정을 안시키는경우
+*		dragNum: array  		: 	area에 넣을 drag-item 인덱스 번호 [1,2,3] 다중) [[1,2,3],[1,2,3]]
+*		clone:boolean   		: 	한개의 drag-item이 여러 area에 들어가야 할경우 복제
+*		multi:boolean   		: 	한개의 area에 여러게 drag-item 이 들어가야할 경우
+*		free:boolean    		: 	drop시 기본은 영역위치에 고정되는데 고정을 안시키는경우
+*		centerWithScale:array	:	area 중앙에 맞게 고정시키면서 drag-item 크기가 바뀌는경우 가로퍼센트, 세로퍼센트로 [0.9, 0.5] 
 *   이벤트
 *
 *	메서드
@@ -432,10 +433,23 @@ $(function ()
 						hitTarget.data("drag", this.touchTarget);
 
 						if(!this.options.free) {
+							
 							var moveX = hitTarget.position().left;
 							var moveY = hitTarget.position().top;
 							TweenLite.set(this.touchTarget, {x:moveX, y:moveY, cursor:"default"});
+
+							if(this.options.centerWithScale) {
+								
+								var scaleX = this.options.centerWithScale[0];
+								var scaleY = this.options.centerWithScale[1];
+								TweenLite.set(this.touchTarget, {scaleX: scaleX, scaleY: scaleY});
+
+								var moveX = (hitTarget.width() - this.touchTarget.width()) / 2 + hitTarget.position().left;
+								var moveY = (hitTarget.height() - this.touchTarget.height()) / 2 + hitTarget.position().top;
+								TweenLite.set(this.touchTarget, {x:moveX, y:moveY, cursor:"default"});
+							}
 						}
+						
 						this.touchTarget.css({cursor:"default"});
 
 						this.touchTarget.addClass("active");
@@ -449,6 +463,7 @@ $(function ()
 					}
 					else
 					{
+						
 						if(this.options.clone)
 						{
 							this.touchTarget.remove();
@@ -482,6 +497,11 @@ $(function ()
 		{
 			var newTarget = target.clone();
 			newTarget.addClass("clone");
+			// newTarget.css({
+			// 					"width": target.width(), 
+			// 					"height": target.height(), 
+			// 					"background-image": target.css("background-image")
+			// 				});
 			newTarget.data("idx", target.data("idx"));
 			newTarget.on(this.touchstart, $.proxy(this.touchStart, this));
 			target.parent().append(newTarget);
@@ -581,7 +601,7 @@ $(function ()
 	})();
 
 	// 메인 기본 옵션
-	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false};
+	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false, centerWithScale: false};
 
     function Plugin(option, params)
     {
