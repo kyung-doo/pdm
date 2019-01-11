@@ -458,7 +458,7 @@ $(function ()
 						}
 						else
 						{
-							TweenLite.to(this.touchTarget, failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
+							TweenLite.to(this.touchTarget, this.options.failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 						}
 						
 						this.element.trigger("draggable.failed", [hitTarget.index(), this.touchTarget.index()]);
@@ -472,7 +472,7 @@ $(function ()
 					}
 					else
 					{
-						TweenLite.to(this.touchTarget, failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
+						TweenLite.to(this.touchTarget, this.options.failedSpeed, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 					}
 				}
 
