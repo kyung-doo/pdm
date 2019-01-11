@@ -319,7 +319,6 @@ $(function ()
 *		clone:boolean   		: 	한개의 drag-item이 여러 area에 들어가야 할경우 복제
 *		multi:boolean   		: 	한개의 area에 여러게 drag-item 이 들어가야할 경우
 *		free:boolean    		: 	drop시 기본은 영역위치에 고정되는데 고정을 안시키는경우
-*		centerWithScale:array	:	area 중앙에 맞게 고정시키면서 drag-item 크기가 바뀌는경우 가로퍼센트, 세로퍼센트로 [0.9, 0.5] 
 *   이벤트
 *
 *	메서드
@@ -437,17 +436,6 @@ $(function ()
 							var moveX = hitTarget.position().left;
 							var moveY = hitTarget.position().top;
 							TweenLite.set(this.touchTarget, {x:moveX, y:moveY, cursor:"default"});
-
-							if(this.options.centerWithScale) {
-								
-								var scaleX = this.options.centerWithScale[0];
-								var scaleY = this.options.centerWithScale[1];
-								TweenLite.set(this.touchTarget, {scaleX: scaleX, scaleY: scaleY});
-
-								var moveX = (hitTarget.width() - this.touchTarget.width()) / 2 + hitTarget.position().left;
-								var moveY = (hitTarget.height() - this.touchTarget.height()) / 2 + hitTarget.position().top;
-								TweenLite.set(this.touchTarget, {x:moveX, y:moveY, cursor:"default"});
-							}
 						}
 						
 						this.touchTarget.css({cursor:"default"});
@@ -601,7 +589,7 @@ $(function ()
 	})();
 
 	// 메인 기본 옵션
-	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false, centerWithScale: false};
+	Draggable.DEFAULT = { dragNum : [], clone: false, multi: false, free: false, customLength:0};
 
     function Plugin(option, params)
     {
