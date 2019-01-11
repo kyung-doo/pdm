@@ -41,6 +41,7 @@ $(function ()
         $(".vote-set > div").removeClass("vote1 vote2 vote3 vote4 vote5");
         $(this).hide();
         $(".drag-content").draggable("reset");
+        count0 = count1 = count2 = count3 = count4 =0;
     });
 
 });
