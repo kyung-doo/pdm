@@ -21,7 +21,6 @@ body {
 
 #drag-content .drag-area {
     position:absolute;
-    opacity:0.5;
 }
 
 #drag-content .drag-area:nth-child(1) {
@@ -29,7 +28,6 @@ body {
     height: 50px;
     left: 150px;
     top: 291px;
-    background: #000000;
 }
 
 #drag-content .drag-area:nth-child(2) {
@@ -37,7 +35,6 @@ body {
     height: 49px;
     left: 110px;
     top: 519px;
-    background: #000000;
 }
 #drag-content .drag-area .area{
     position:relative;
@@ -49,7 +46,42 @@ body {
 }
 
 
-
+#answer1{
+    position: absolute;
+    width:332px;
+    height:49px;
+    background: url("text-box_01.png");
+}
+#answer2{
+    position: absolute;
+    width:332px;
+    height:49px;
+    background: url("text-box_02.png");
+}
+#answer3{
+    position: absolute;
+    width:332px;
+    height:49px;
+    background: url("text-box_03.png");
+}
+#answer4{
+    position: absolute;
+    width:591px;
+    height:49px;
+    background: url("text-box_04.png");
+}
+#answer5{
+    position: absolute;
+    width:591px;
+    height:49px;
+    background: url("text-box_05.png");
+}
+#answer6{
+    position: absolute;
+    width:591px;
+    height:49px;
+    background: url("text-box_06.png");
+}
 
 
 
