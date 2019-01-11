@@ -264,4 +264,6 @@ body {
     top:674px;
     width:204px;
     height:87px;
+    background:url("btn_replay_n.png") no-repeat;
+    cursor:pointer;
 }

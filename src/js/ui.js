@@ -583,6 +583,18 @@ $(function ()
 				this.element.find(".drag-item .area").off("touchstart mousedown");
 				$(window).off("touchmove mousemove");
 				$(window).off("touchend mouseup");
+			},
+
+			reset : function () {
+				this.element.find(".drag-item").each(function ()
+				{
+					$(this).data("area", null).removeClass("active");
+					TweenLite.set($(this), {x:$(this).data("x"), y:$(this).data("y")});
+				});
+				this.element.find(".drag-area").each(function ()
+				{
+					$(this).data("drag", null);
+				});
 			}
 		});
 

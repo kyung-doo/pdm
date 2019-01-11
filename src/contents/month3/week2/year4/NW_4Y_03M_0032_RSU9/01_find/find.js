@@ -32,7 +32,15 @@ $(function ()
 
     $(".drag-content").on("draggable.finish", function ( e )
     {
+        $(".reset-btn").show();
         console.log('finish')
+    });
+
+    $(".reset-btn").on("button.click", function( e )
+    {
+        $(".vote-set > div").removeClass("vote1 vote2 vote3 vote4 vote5");
+        $(this).hide();
+        $(".drag-content").draggable("reset");
     });
 
 });
