@@ -473,7 +473,7 @@ $(function ()
 							TweenLite.to(this.touchTarget, 0.6, {x:this.touchTarget.data("x"), y:this.touchTarget.data("y"), ease:Cubic.easeOut});
 						}
 						
-						this.element.trigger("draggable.failed");
+						this.element.trigger("draggable.failed", [hitTarget.index(), this.touchTarget.index()]);
 					}
 				}
 				else
